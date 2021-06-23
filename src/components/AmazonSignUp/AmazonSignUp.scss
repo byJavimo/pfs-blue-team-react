@@ -1,0 +1,88 @@
+$primary-color: green;
+$amazon-main-color: #f0c14b;
+$amazon-color-1: #a88734;
+$amazon-color-2: #9c7e31;
+$amazon-color-3: #846a29;
+
+@mixin input-form {
+    background-color: #fff;
+    border-width: 1px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    height: 25px;
+    padding: 3px 7px;
+    line-height: normal;
+    color: black;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.amazon-sign-up {
+    font-family: "Amazon Ember, Arial, sans-serif";
+    margin: 0 auto;
+
+    &__box {
+        max-width: 350px;
+        margin: 0 auto;
+        border: 1px #ddd solid;
+        border-radius: 5px;
+        position: relative;
+        padding: 14px 18px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1.2;
+            text-align: left;
+            margin: 10px 0;
+        } 
+        > div {
+            margin-bottom: 14px;
+            label {
+                display: block;
+                font-weight: 700;
+                text-align: left;
+                padding-bottom: 2px;
+                padding-left: 2px;
+                font-size: 13px;
+            }
+            input {
+                @include input-form();
+                &:focus, &:active, &:hover, &:focus-visible {
+                    border-color: #e77600;
+                    outline: unset;
+                }
+            }
+    
+            input[type="submit"] {
+                @include input-form();
+                cursor: pointer;
+                height: 33px;
+                background-color: $amazon-main-color;
+                border-color: $amazon-color-1 $amazon-color-2 $amazon-color-3;
+                width: 100%;
+    
+                &:hover {
+                    box-shadow: 0.5px 0.5px 1px 0.5px #000000;
+                }
+            }
+        }
+    }
+
+    &__footer {
+        font-size: 13px;
+        line-height: 1.5;
+        text-align: left;
+
+        a {
+            text-decoration: none;
+            color: #0066c0;
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: $amazon-main-color;
+        }
+    }
+}

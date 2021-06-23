@@ -1,0 +1,37 @@
+$organge: orange;
+$danger: red;
+$success: green;
+
+
+@mixin input-field {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid $organge;
+}
+
+@mixin button {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.counter {
+    input {
+        @include input-field();
+    }
+
+    button {
+        @include button();
+        &.increment {
+            background-color: $success;
+        }
+        &.decrement {
+            background-color: $organge;
+        }
+        &.reset {
+            background-color: $danger;
+        }
+    }
+}

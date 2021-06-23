@@ -1,0 +1,18 @@
+$primary-color: green;
+
+@mixin styledButton {
+    cursor: pointer;
+    margin: 20px;
+    color: $primary-color;
+    font-size: 30px
+}
+
+.styled-component {
+    h3 {
+        display: block;
+    }
+
+    .styled-button {
+        @include styledButton()
+    }
+}

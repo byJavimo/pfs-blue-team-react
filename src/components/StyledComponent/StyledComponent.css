@@ -1,0 +1,10 @@
+.styled-component h3  {
+    display: block;
+}
+
+.styled-component .styled-button {
+    cursor: pointer;
+    margin: 20px;
+    color: red;
+    font-size: 30px
+}
